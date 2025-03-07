@@ -7,7 +7,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
 object GeminiApiService {
-    private const val API_KEY = ""
+    private const val API_KEY = "EnterYourAPIhere"
 
     private val generativeModel = GenerativeModel(
         modelName = "gemini-2.0-flash",
