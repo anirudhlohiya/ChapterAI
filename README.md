@@ -7,10 +7,7 @@ Welcome to **ChapterAI**, an educational Android application designed to assist 
 ## Table of Contents
 - [Features](#features)
 - [Screenshots](#screenshots)
-- [API Usage Notice](#api-usage-notice)
-- [APK Download](#apk-download)
-- [Prerequisites](#prerequisites)
-- [Contact](#contact)
+- [DemoVideo](#demovideo)
 
 ## Features
 - Interactive subject and chapter selection.
@@ -22,3 +19,10 @@ Welcome to **ChapterAI**, an educational Android application designed to assist 
 | Subject Selection Screen | Class Selection Screen | List Of Chapters Screen | AI Screen | AI Explanation Screen |
 |--------------------------|-----------------------|-------------------------|-----------|------------------------|
 | ![Subject Selection](./screenshots/subject_selection.jpg) | ![Class Selection](./screenshots/class_selection.jpg) | ![List Of Chapters](./screenshots/list_of_chapters.jpg) | ![AI Screen](./screenshots/ai_screen.jpg) | ![AI Explanation](./screenshots/ai_answer.jpg) |
+
+## DemoVideo
+
+Below is a demo video showcasing the working of ChapterAI:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6pfjx1amNbU" 
+title="ChapterAI Demo Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
