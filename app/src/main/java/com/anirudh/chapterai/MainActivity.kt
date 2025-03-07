@@ -115,7 +115,6 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-// Data class to hold subject information
 data class Subject(val name: String, val iconRes: Int, val chapters: List<String>)
 
 // List of subjects with chapters (CBSE Std 9)
@@ -167,16 +166,10 @@ fun InitialScreen(paddingValues: PaddingValues, navController: NavController) {
             .fillMaxSize()
             .background(Color.White)
             .padding(paddingValues)
+            .padding(horizontal = 16.dp)
     ) {
         TopAppBar(
             title = { Text("ChapterAI", fontSize = 20.sp, fontWeight = FontWeight.Bold) },
-            navigationIcon = {
-                Icon(
-                    imageVector = Icons.Default.ArrowBack,
-                    contentDescription = "Back",
-                    modifier = Modifier.clickable { /* Add back action later */ }
-                )
-            },
             actions = {
                 var expanded by remember { mutableStateOf(false) }
                 Box {
@@ -212,8 +205,9 @@ fun InitialScreen(paddingValues: PaddingValues, navController: NavController) {
         LazyVerticalGrid(
             columns = GridCells.Fixed(3),
             modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.spacedBy(8.dp),
-            verticalArrangement = Arrangement.spacedBy(8.dp)
+            horizontalArrangement = Arrangement.spacedBy(16.dp),
+            verticalArrangement = Arrangement.spacedBy(16.dp),
+            contentPadding = PaddingValues(bottom = 16.dp)
         ) {
             items(subjects) { subject ->
                 SubjectButton(subject) {
@@ -230,12 +224,14 @@ fun SubjectButton(subject: Subject, onClick: () -> Unit) {
         modifier = Modifier
             .fillMaxWidth()
             .clickable { onClick() },
-        shape = RoundedCornerShape(8.dp),
+        shape = RoundedCornerShape(16.dp),
         elevation = CardDefaults.cardElevation(defaultElevation = 4.dp),
         colors = CardDefaults.cardColors(containerColor = Color(0xFFE8F5E9))
     ) {
         Column(
-            modifier = Modifier.padding(16.dp),
+            modifier = Modifier
+                .padding(16.dp)
+                .fillMaxWidth(),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             androidx.compose.foundation.Image(
@@ -332,7 +328,6 @@ fun AIExplanationScreen(
             .fillMaxSize()
             .background(Color.White)
             .padding(paddingValues)
-//            .padding(horizontal = 16.dp)
             .verticalScroll(rememberScrollState())
     ) {
         TopAppBar(
@@ -412,7 +407,7 @@ fun AIExplanationScreen(
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(top = 16.dp, start = 16.dp,end = 16.dp)
-                .weight(1f, fill = false) // Allow scrolling with remaining space
+                .weight(1f, fill = false)
         ) {
             item {
                 Text(
